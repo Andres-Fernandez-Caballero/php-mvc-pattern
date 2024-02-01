@@ -5,24 +5,18 @@ spl_autoload_register(function ($className) {
     include 'controllers/' . $className . '.php';
 });
 
-// Incluye las rutas
-$routes = include 'routes/web.php';
+$routes = include 'routes/web.php'; // Incluye las rutas
+$currentRoute = $_SERVER['REQUEST_URI']; // Obtén la ruta actual desde la URL
 
-// Obtén la ruta actual desde la URL
-$currentRoute = $_SERVER['REQUEST_URI'];
-
-
-// Verifica si la ruta existe en las definiciones de rutas
-if (array_key_exists($currentRoute, $routes)) {
+if (array_key_exists($currentRoute, $routes)) { // Verifica si la ruta existe en las definiciones de rutas
     $route = $routes[$currentRoute];
 
-    // Forma el nombre completo de la clase del controlador
-    $controllerClassName = ucfirst($route['controller']) . 'Controller';
+    $controllerClassName = ucfirst($route['controller']) . 'Controller';    // Forma el nombre completo de la clase del controlador
 
     // Verifica si la clase del controlador existe
     if (class_exists($controllerClassName)) {
-        // Crea una instancia del controlador
-        $controller = new $controllerClassName();
+
+        $controller = new $controllerClassName(); // Crea una instancia del controlador
 
         // Verifica si la acción existe en el controlador
         $action = $route['action'];
@@ -30,8 +24,8 @@ if (array_key_exists($currentRoute, $routes)) {
             // Llama a la acción del controlador y obtén la vista con los datos
             $viewContent = $controller->$action();
 
-            // Muestra la vista según tus necesidades
-            echo $viewContent;
+            echo $viewContent;  // Muestra la vista según tus necesidades
+            
         } else {
             echo '404 Acción no válida';
         }
