@@ -27,9 +27,9 @@ class InfoController {
         public function filosofia() 
         {
             ob_start();
-            include __DIR__ . '/../views/filosofia.php';
+          //  include __DIR__ . '/../views/filosofia.php';
             
-            //$html="<h1>mision<h1>";
+            echo "<h1>Filosofía<h1>";
 
             $view = ob_get_clean();
             return $view;
