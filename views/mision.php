@@ -6,7 +6,7 @@
     <title>GYMBroo!</title>
 </head>
 <body>
-    <h1>GYMBroo!</h1>
+    <h1>MISION</h1>
 
     <a href="/auth/login">Login</a>
     <a href="/r">Registrarme</a>
