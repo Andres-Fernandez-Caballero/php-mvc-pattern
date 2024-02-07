@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GYMBroo</title>
-</head>
+<? include "head.php"; ?>
 <body>
     <header>    
         <h1>Login</h1>
     </header>
+
+    <? include "menu.php"; ?>
 
     <form>
         <label for="email">Email</label>
