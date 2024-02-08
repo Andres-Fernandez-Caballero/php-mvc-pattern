@@ -5,7 +5,7 @@ class InfoController {
         public function mision() 
         {
             ob_start();
-            include __DIR__ . '/../views/mision.php';
+            include __DIR__ . '/../views/info_mision.php';
             
             //$html="<h1>mision<h1>";
 
@@ -16,7 +16,7 @@ class InfoController {
         public function vision() 
         {
             ob_start();
-            include __DIR__ . '/../views/vision.php';
+            include __DIR__ . '/../views/info_vision.php';
             
             //$html="<h1>mision<h1>";
 
@@ -27,9 +27,9 @@ class InfoController {
         public function filosofia() 
         {
             ob_start();
-          //  include __DIR__ . '/../views/filosofia.php';
+            include __DIR__ . '/../views/info_filosofia.php';
             
-            echo "<h1>Filosofía<h1>";
+         //   echo "<h1>Filosofía<h1>";
 
             $view = ob_get_clean();
             return $view;

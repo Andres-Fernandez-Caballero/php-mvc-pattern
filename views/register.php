@@ -1,7 +1,12 @@
-<? include "head.php"; ?>
+<?
+    $PAGE_TITLE="Registro";
+
+include "head.php"; 
+
+?>
 
 <body>
-    <h1>Registro</h1>
+    <? include "header.php"; ?>
 
     <a href="../">Volver a home</a>
 </body>
