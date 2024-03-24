@@ -11,4 +11,12 @@ class AuthController {
             $view = ob_get_clean();
             echo $view;
         }
+
+        public function register()
+        {
+            ob_start();
+            include __DIR__ . '/../views/register.php';
+            $view = ob_get_clean();
+            return $view;
+        }
 }
